@@ -11,7 +11,7 @@ detector = HandDetector(maxHands=2)
 offset = 20
 imgSize = 300
 
-folder="Data/Love"
+folder="DataSet/DataWords/Thank You"
 counter=0
 
 labels=["Bird","Flower","Good","Sorry","Thank You"]

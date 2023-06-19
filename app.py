@@ -1,8 +1,10 @@
 from flask import Flask, render_template
 import subprocess
-import os
+import numpy as np
 import signal
 import sys
+import gtts
+from playsound import playsound
 
 
 app = Flask(__name__)
@@ -18,6 +20,10 @@ def index():
 
 @app.route('/run_letter')
 def run_letter():
+    t1 = gtts.gTTS("Place your hand towards the camera module.")
+    soundName=str(np.random.randint(0,100))+".mp3"
+    t1.save(soundName)
+    playsound(soundName)
     global letter_process
     if letter_process is None or letter_process.poll() is not None:
         letter_process = subprocess.Popen([sys.executable, 'letters.py'])

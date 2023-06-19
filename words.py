@@ -15,7 +15,7 @@ classifier = Classifier("ModelWord/keras_model.h5", "ModelWord/labels.txt")
 offset = 10
 imgSize = 128
 
-labels=["Bird","Flower","Good","Sorry","Thank You","Salute","Love"]
+labels=["Bird","Flower","Love","Salute","Sorry","Thank You"]
 
 while True:
     success, img = cap.read()
