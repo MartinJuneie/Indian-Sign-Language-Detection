@@ -1,6 +1,7 @@
 0 Bird
 1 Flower
-2 Love
-3 Salute
-4 Sorry
-5 Thank You
+2 Good
+3 Love
+4 Salute
+5 Sorry
+6 Thank You

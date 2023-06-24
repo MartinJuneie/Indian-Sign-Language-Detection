@@ -11,7 +11,7 @@ detector = HandDetector(maxHands=2)
 offset = 20
 imgSize = 300
 
-folder="DataSet/DataWords/Thank You"
+folder="DataSet/DataLetters/A"
 counter=0
 
 labels=["Bird","Flower","Good","Sorry","Thank You"]
@@ -78,12 +78,13 @@ while True:
             hGap = math.ceil((imgSize - hCal) / 2)
             imgWhite[hGap:hCal + hGap, : ] = imgResize
 
-        cv2.imshow("ImageCrop", imgCrop)
         cv2.imshow("ImageWhite", imgWhite)
+        grayscale = cv2.cvtColor(imgWhite, cv2.COLOR_BGR2GRAY)
+        cv2.imshow("Gray", grayscale)
 
     cv2.imshow("Image", img)
     key= cv2.waitKey(1)
     if key == ord("s") or key == ord("S"):
         counter += 1
-        cv2.imwrite(f'{folder}/Image_{time.time()}.jpg',imgWhite)
+        cv2.imwrite(f'{folder}/Image_{time.time()}.jpg',grayscale)
         print (counter)
