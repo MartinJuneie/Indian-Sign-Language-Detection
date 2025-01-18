@@ -1,0 +1,311 @@
+\documentclass[a4paper,12pt,oneside]{report}  % Report format and Font size = 12pts
+\usepackage{array}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{biblatex}
+\usepackage{emptypage}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{glossaries}
+\usepackage{dirtytalk}
+%\usepackage[scaled]{helvet} % Font Style = Timesnewroman
+\renewcommand{\baselinestretch}{1.5} % Line spacing = 1.5
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=1.2in,
+ top=1in,
+ bottom=1.25in,
+ right=1in
+ }
+
+\usepackage{sectsty}
+
+
+\chapternumberfont{\vspace{-2 cm} \centering \Large \MakeUppercase  }
+\chaptertitlefont{\vspace{-0.5 cm} \centering \Large \MakeUppercase }
+\sectionfont{\large\uppercase}
+\subsectionfont{\large }
+
+
+
+
+
+\usepackage{fancyhdr}
+\newcommand{\changefont}{%
+\fontsize{10}{12}\selectfont
+}
+\usepackage{tocloft}
+\usepackage{tabularx}
+\newcommand{\listequationsname}{List of Equations}
+ \newlistof{myequations}{equ}{\listequationsname}
+ \newcommand{\myequations}[1]{%
+ \addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}\par}
+\renewcommand{\contentsname}{CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+%\renewcommand{\listtablename}{My nice list of table}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\large\bfseries}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\large\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+
+\begin{document}
+
+\begin{titlepage}
+\addtolength{\hoffset}{0cm}
+\centering
+{\scshape\large \bfseries PROJECT TITLE \par}
+\vspace{1cm}
+{\scshape \bfseries A PROJECT REPORT \par}
+
+
+\vspace{0.5cm}
+{\small \bfseries submitted by \par}
+\vspace{0.5cm}
+{\large \bfseries NAME \par}
+{\large \bfseries MUT19CS000 \par}
+\vspace{0.5cm}
+{\small \bfseries to \par}
+\vspace{0.5cm}
+{\small \bfseries  the APJ Abdul Kalam Technological University in partial fullfilment of the requirements for the award of the Degree \par}
+\vspace{0.5cm}
+{\small \bfseries of \par}
+\vspace{0.5cm}
+{\bfseries Bachelor of Technology\par}
+{ In \par}
+{\bfseries Computer Science \& Engineering \par}
+\vspace{1cm}
+\includegraphics[width=0.50\textwidth]{MITS.png}\par\vspace{1cm}
+{\bfseries Department of Computer Science \& Engineering\par}
+{\bfseries Muthoot Institute of Technology and Science\par}
+{\bfseries Varikoli PO, Puthencruz - 682308 \par}
+\vspace{1cm}
+{\bfseries JULY 2022 \par}
+\end{titlepage}
+
+\begin{titlepage}
+{\scshape \centering \Large \bfseries DECLARATION \par}
+\vspace{1.5cm}
+{ I hereby declare that this submission is my own work and that, to the best of my knowledge and belief, it contains no material previously written by another person nor material which has been accepted for the award of any other degree or diploma of the university or other institute of higher learning, except where due acknowledgment has been made in the text.}
+\vspace{2cm}
+\begin{flushright}
+    \textbf{NAME }
+    
+\end{flushright}
+
+\begin{flushright}
+    \textbf{MUT19CS000} }
+    
+\end{flushright}
+\newline
+\vspace{2cm}
+{\noindent Place: \newline \noindent Date:}
+\end{titlepage}
+
+\begin{titlepage}
+\vspace{1.5cm}
+\begin{center}
+   \includegraphics[width=0.50\textwidth]{MITS.png}\par\vspace{1cm}
+   {\scshape \Large \bfseries CERTIFICATE \par}
+\end{center}
+\newline \noindent
+\textit{This is to certify that the report entitled} \textbf{“PROJECT TITLE”}, \textit{submitted by} \textbf{NAME  } \textit{to Muthoot Institute of Technology and Science, Varikoli for the award of the degree of Bachelor of Technology in Computer Science \&  Engineering is a bonafide record of the project work carried out by her, under our supervision and guidance. The content of the report, in full or parts have not been submitted to any other Institute or University for the award of any other degree or diploma.}
+\vspace{2.5cm}
+\newline \noindent
+\text{Ms.Fasila K.A \hspace{3cm} Ms.Steffy Livera\hspace{3cm}Dr.Anand Hareendran S }
+\newline
+\text{\hspace{.1cm}Project Guide\hspace{3cm}Project Coordinator\hspace{2.5cm}Head of the Department}
+
+\vspace{3cm}
+
+{\noindent Place \newline \noindent Date}
+
+\vspace{3cm}
+\newline \noindent
+
+
+\end{titlepage}
+
+
+
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\thispagestyle{plain}
+\begin{center}
+
+\section*{ACKNOWLEDGMENT}
+\end{center}
+\addcontentsline{toc}{section}{\uppercase\textbf{ACKNOWLEDGMENT}}
+
+\noindent
+\newline
+I am grateful to almighty who has blessed me with good health, committed and continuous interest throughout the project work.
+\newline
+\newline
+I express my sincere thanks to my guide, \textbf{Ms. Fasila K A}, Assistant Professor, Department of Computer Science And Engineering, Muthoot Institute of Technology and Science and \textbf{Dr. Anand Hareendran S}, Professor, Head Of the Department, Muthoot Institute of Technology and Science for their guidance and support which were instrumental in all the stages of the project work and without whom the project could not have been accomplished.
+\newline
+\newline
+In particular, I also wish to express my sincere appreciation to \textbf{Dr. Anand Hareendran S}, Head Of the Department, Muthoot Institute of Technology and Science, who was willing to spend his precious time to give some ideas and suggestion towards this project.
+\newline
+\newline
+I am grateful to my project coordinator \textbf{Ms. Steffy Livera } Assistant Professor, Department of Computer Science And Engineering, Muthoot Institute of Technology and Science, for her guidance and support.
+\newline
+\newline
+I would like to thank \textbf{Dr. Neelakantan P.C.}, Principal, Muthoot Institute of Technology and Science, Varikoli for providing us all the necessary facilities.
+\newline
+\newline
+The last but not the least, I extend my sincere thanks to the entire teaching and non-teaching staff of Computer Science And Engineering of Muthoot Institute of Technology and Science for their help and co-operation throughout our project work.
+
+\begin{flushright}
+\vspace{10 mm}
+
+\end{flushright}
+
+
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{2}
+\thispagestyle{plain}
+\begin{center}
+\section*{ABSTRACT}
+\end{center}
+\addcontentsline{toc}{section}{\uppercase\textbf{Abstract}}
+\newline
+
+
+\newpage
+\tableofcontents
+
+
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{\uppercase\textbf{List of Figures}}
+
+
+
+
+
+
+
+\newpage
+\renewcommand\thepage{\arabic{page}}
+
+\clearpage
+
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\changefont\thechapter.\leftmark}
+\rhead{\changefont\rightmark}
+\cfoot{\thepage}
+\renewcommand{\chaptermark}[1]{%
+\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{%
+\markright{#1}{}}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\chapter{INTRODUCTION}
+\vspace{-1 cm}
+
+\section{INTRODUCTION}
+\noindent
+
+\section{SCOPE AND MOTIVATION}
+\noindent
+
+
+
+
+\chapter{PROPOSED WORK}
+\vspace{-1 cm}
+\noindent
+\section{OBJECTIVES}
+\section{PROBLEM STATEMENT}
+\section{EXISTING SYSTEM AND PROPOSED SOLUTION}
+\subsection{EXISTING SYSTEM}
+\subsection{PROPOSED SYSTEM}
+
+\newpage
+\chapter{PROJECT DESIGN}
+\vspace{-1 cm}
+\section{SYSTEM ARCHITECTURE}
+\section{MODULES}
+
+\newline
+\subsection{first module}
+
+\subsection{second module}
+
+
+\newline
+\subsection{third module}
+
+
+
+\section{DATA FLOW DIAGRAM}
+\subsection{DFD LEVEL 0}
+\renewcommand\thefigure{\thechapter.\arabic{figure}}
+
+
+\subsection{DFD LEVEL 1}
+
+\subsection{DFD LEVEL 2}
+\renewcommand\thefigure{\thechapter.\arabic{figure}}
+
+  
+\newpage
+\section{DATABASE TABLE DESIGN}
+\subsection{first table in db}
+
+\subsection{second table in db}
+
+
+
+
+\section{GUI DESIGN}
+
+\section{TECHNOLOGY STACK}
+
+\section{SYSTEM REQUIREMENTS}
+
+
+\chapter{IMPLEMENTATION}
+\vspace{-1 cm}
+
+\section{CODE SNIPPETS}
+\noindent
+
+\newpage
+
+\section{SCREENSHOTS}
+\renewcommand\thefigure{\thechapter.\arabic{figure}}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[height=8cm,width=10cm]{MITS.png}  
+\caption{figure name}
+\label{fig1} 
+\end{figure}
+\chapter{CONCLUSION}
+
+\newpage
+
+
+
+
+\section{REFERENCES}
+\begin{enumerate}
+\item 
+
+\end{enumerate}
+
+
+\end{document}
